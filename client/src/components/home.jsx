@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./home.css";
-import imageSrc from "./Irctc.jpg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import PayDetails from "./payDetails";
@@ -45,35 +44,43 @@ function Home({log}) {
 
   return (
     <div>
-      <div class="container">
-        <ul class="nav nav-pills">
-          <li class="nav-item">એ હાલો....</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">
+      <div className="container">
+        <ul className="nav nav-pills">
+          
+          <li className="nav-item">
+            <a href="#" className="nav-link active" aria-current="page">
               Home
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li className="nav-item">
+            <a href="#" className="nav-link">
               Booklist
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li className="nav-item">
+            <a href="#" className="nav-link">
               About Us
             </a>
           </li>
         </ul>
       </div>
-      <div class="welcome">
+      <div className="welcome">
         <h1>Welcome,</h1>
         <p>
           Revolutionize your travel experience with our train travel
           website,offering seamless booking,real-time updates,and current
           itineraries.Explore the world by rail,where every journey is a
           story,waiting to be written.{" "}
-        </p>
-        <img src={imageSrc} alt="Description of the image" />
+        </p><div
+   Style = {{
+      backgroundImage:
+      './irctc.jgp',
+   }}
+   >
+
+</div>
+
+       
       </div>
       <div>
         <h1>Start Your Journey</h1>
@@ -99,7 +106,7 @@ function Home({log}) {
         <br />
       </div>
       <div>
-        <h2>Date</h2>
+        <h2 style={{marginTop:0 + 'px'}}>Date</h2>
         <DatePicker
           selected={date}
           onChange={(date) => setDate(date)}
